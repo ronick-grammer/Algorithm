@@ -5,7 +5,7 @@ int n = 8; // 숫자의 갯수
 int arr[8] = {2, 4, 6, 8, 10, 12, 14, 16}; // 이진탐색은 정렬이 되어 있는 상태에서만 사용할 수 있다
 
 int binarySearch(int value , int start, int end){ // value: 탐색할 숫자
-    if(start < end){ // 비교할 숫자가 두개이상일때 이진탐색 가능
+    if(start <= end){ // 비교할 숫자가 두개이상일때 이진탐색 가능
         int index_mid = (start + end) / 2; // 중간점을 찾는다
         if(arr[index_mid] < value) // 탐색하는 값이 중간 값보다 크면
         {
