@@ -11,7 +11,7 @@ int findParent(int x){
     else{
         // DP 의 memoization 같은 느낌. 이로 인해 O(v*m) -> O(v) 가 되는 마법
         // m : find 혹은 union 연산의 수 
-        return parent[x] = findParent(parent[x]); // O(v)
+        return parent[x] = findParent(parent[x]); // O(v), 경로 압축 기법(Path Compression)
         
         //return findParent(parent[x]); // O(v*e)
     }
