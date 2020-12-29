@@ -6,6 +6,8 @@ using namespace std;
 
 // '크루스칼' 알고리즘은 '최소 신장 트리'를 구하는 알고리즘이며
 // 최소 신장 트리란, 그래프가 있을때 모든 노드가 연결되어 있으면서 사이클을 형성하지 않는 신장 트리를 말한다
+// 시간 복잡도는 O(ElogE) 이다. 이는 sort()함수가 간선들의 최소비용을 quick sort 나 merge sort 를
+// 하는데 드는 시간 복잡도이며 서로소를 찾는 알고리즘의 시간 복잡도는 이보다 작으므로 무시한다
 
 // a - b 의 비용 cost 를 graph 에 담는다
 vector< pair < int, pair <int, int> > > graph; 
