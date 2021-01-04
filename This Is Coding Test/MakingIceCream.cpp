@@ -2,8 +2,8 @@
 using namespace std;
 
 int n, m;
-int result;
-int arr[1001][1001];
+int result; // 만들 수 있는 아이스크림 갯수
+int arr[1001][1001]; // 얼음 틀
 
 int dfs(int r, int c){
     if(r < 0 || r >= n || c < 0 || c >= m){ // 범위 초과면 0 반환
