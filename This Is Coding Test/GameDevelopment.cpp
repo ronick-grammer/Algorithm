@@ -59,10 +59,11 @@ int main(void){
             nr = a - direction_row[d];
             nc = b - direction_column[d];    
 
-            if(map[nr][nc] == 1){ // 한칸 후진했는데 바다이면 멈춘다
+            if(map[nr][nc] == 1){ // 한칸 후진했는데 바다이거나 방문한거면 멈춘다
                 break;
             }
-
+            
+            // 그렇지 않으면 이동한다
             a = nr;
             b = nc;
             count_turning = 0;
