@@ -7,7 +7,8 @@ using namespace std;
 vector<int> v1, v2; // 모든 부품의 고유번호를 담을 변수와 특정 부품의 고유번호를 담을 변수
 
 string binarySearch(int value, int start, int end){ 
-    if(start <= end){ // 비교할 수가 2개 이상일때 진행
+    // '=' 까지 꼭 해주어야 한다. start 와 end 가 같다는 것은 반으로 쪼개고 또 쪼갰는데 마지막 남은 숫자가 한개라는 것이다. 이걸 해주지 않으면 그 마지막 남은 숫자와 value를 비교하지 않게 된다
+    if(start <= end){ 
         int index_mid = (start + end) / 2; // 중간점 찾기
         if(v1[index_mid] > value){ // 탐색하는 값이 중간값보다 작으면
             return binarySearch(value, start, index_mid - 1); // 왼쪽에 탐색 값이 존재
