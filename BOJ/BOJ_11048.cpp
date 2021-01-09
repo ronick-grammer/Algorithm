@@ -2,6 +2,8 @@
 #include <algorithm>
 using namespace std;
 
+// problem link : https://www.acmicpc.net/problem/11048
+
 int dp[1001][1001];
 
 int main(void){
