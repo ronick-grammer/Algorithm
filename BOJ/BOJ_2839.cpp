@@ -3,6 +3,8 @@
 #include <vector>
 using namespace std;
 
+// problem link : https://www.acmicpc.net/problem/2839
+
 #define MAX 5001 // 최대치 킬로 그램
 
 int arr[2] = {3, 5}; // 3kg 봉지, 5kg 봉지
