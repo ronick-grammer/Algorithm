@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// problem link : https://www.acmicpc.net/problem/11727
+
 int dp[1001];
 
 int main(void){
