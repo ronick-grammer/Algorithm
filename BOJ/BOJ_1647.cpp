@@ -4,6 +4,8 @@
 #include <algorithm>
 using namespace std;
 
+// problem link : https://www.acmicpc.net/problem/1647
+
 // 크루스칼 알고리즘으로 최소 신장 트리로 만들고 그중에서 가장 유지비가 큰 간선을 없애면
 // 두 마을로 쪼개지고 두 마을의 최소 유지비 합을 구한다
 
