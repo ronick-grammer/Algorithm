@@ -5,6 +5,8 @@
 #include <algorithm>
 using namespace std;
 
+//problem link: https://acmicpc.net/problem/3190
+
 #define SNAKE_BODY 2 //  뱀의 몸통
 #define APPLE 3 // 사과
 #define EMPTY 4 // 아무것도 없음(사과가 없음)
