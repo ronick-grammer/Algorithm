@@ -9,12 +9,12 @@ using namespace std;
 
 #define SNAKE_BODY 2 //  뱀의 몸통
 #define APPLE 3 // 사과
-#define EMPTY 4 // 아무것도 없음(사과가 없음)
+#define EMPTY 0 // 아무것도 없음(사과가 없음)
 
 #define D 1 // 오른쪽으로 방향 전환
 #define L -1 // 왼쪽으로 방향 전환
 
-int map[101][101]; // 보드
+int map[101][101]; // 보드 (전부 EMPTY 0 으로 초기화 됨)
 queue<pair<int, int> > snake; // 뱀의 머리와 몸통(맨 마지막에 삽입된 것이 뱀의 머리이다)
 vector<pair<int, int> > direction_n_time; // 경과 시간마다 전환할 방향 저장
 
@@ -96,10 +96,6 @@ int startGame(int startRow, int startColumn){
 int main(void){
     cin>>n;
     cin>>k;
-
-    for(int i = 1; i <= n; i++){
-        fill_n(map[i], n + 1, EMPTY);
-    }
     
     for(int i = 0; i < k; i++){
         int row, column;
