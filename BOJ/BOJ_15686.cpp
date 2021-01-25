@@ -5,6 +5,8 @@
 #include <cmath>
 using namespace std;
 
+//problem link: https://www.acmicpc.net/problem/15686
+
 int n, m;
 vector<pair<int, int> > locations_houses; // 각 집들의 경로들
 vector<pair<int, int> > locations_chickens; // 각 치킨집의 경로들
