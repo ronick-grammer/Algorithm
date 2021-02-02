@@ -1,7 +1,7 @@
 #include <string>
-#include <vector>
-
 using namespace std;
+
+//problem link: https://programmers.co.kr/learn/courses/30/lessons/60058
 
 int getSplitedIndex(string s){ // 균형잡힌 괄호 문자열의 인덱스 반환
     int count_left = 0;
