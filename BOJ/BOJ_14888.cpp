@@ -4,8 +4,6 @@
 #include <utility>
 using namespace std;
 
-//problem link: https://www.acmicpc.net/problem/14888
-
 int n;
 int minNum = 1e9, maxNum = -1e9;
 vector<int> numbers; // 오리지널 숫자들을 담을 변수
@@ -14,37 +12,32 @@ int result[11]; // 오리지널 숫자들을 가지고 연산한 결과값을 �
 
 char c[4] = {'+', '-', '*', '/'};
 
-
-int get_result(int x, int y, char oper){
-    switch (oper)
-    {
-    case '+':
-        return x + y;
-    case '-':
-        return x - y;
-    case '*':
-        return x * y;
-    case '/':
-        return x / y;
-
-    default:
-        return 0;
-    }
-}
-
 int dfs(int x){
     if((x + 1) >= n){ // 연산할 숫자 만큼만 진행한다
         return 0;
     }
 
-    for(int i = 0; i < 4; i++){
-        if(operators[x] == c[i]){  // 두 값을 연산한 결과 값을 오른순으로 저장한다
-            result[x + 1] = get_result(result[x], numbers[x + 1], c[i]); 
-            dfs(x + 1); // 이제 다음 숫자와 연산을 한다
+    switch (operators[x])
+    {
+        // 두 값을 연산한 결과 값을 오른순으로 저장한다
+        case '+':
+            result[x + 1] = result[x] + numbers[x + 1];
             break;
-        }
+        case '-':
+            result[x + 1] = result[x] - numbers[x + 1];
+            break;
+        case '*':
+            result[x + 1] = result[x] * numbers[x + 1];
+            break;
+        case '/':
+            result[x + 1] = result[x] / numbers[x + 1];
+            break;
+        
+        default:
+            break;
     }
-
+    
+    dfs(x + 1); // 이제 다음 숫자와 연산을 한다
     return result[n-1]; // 연산된 결과값 반환
 }
 
@@ -73,7 +66,6 @@ int main(void){
         
         minNum = min(minNum, sum);
         maxNum = max(maxNum, sum);
-
     }while(next_permutation(operators.begin(), operators.end()));
 
     cout<<maxNum<<endl;
