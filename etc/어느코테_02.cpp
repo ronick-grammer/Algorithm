@@ -80,7 +80,8 @@ int solution(vector<string> holidays, int k){
             }
         }
     }
-    if(successiveCount >= 3){ // 휴일이 365 일 연속으로 있는 경우라면 
+    // successiveCount 가 도중에 0 으로 휴일 수가 초기화 되지 않고 1 이상이라는 것은 365까지 연속적으로 증가되었다는 것을 뜻한다. 1년이 전체 휴일이라는 뜻
+    if(successiveCount >= 1){ 
         successiveCounts.push_back(successiveCount);
     }
 
