@@ -8,6 +8,8 @@ using namespace std;
 
 #define EMPTY 0
 
+//problem link: 비공개, 비밀이지롱
+
 int solution(int n, vector<string> recipes, vector<string> orders) {
     int answer;
     vector<int> stove(n, EMPTY);
