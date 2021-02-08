@@ -5,6 +5,8 @@
 #include <queue>
 using namespace std;
 
+//problem link: https://programmers.co.kr/learn/courses/30/lessons/60063
+
 #define  WALL 1
 
 // 상, 하, 좌, 우
