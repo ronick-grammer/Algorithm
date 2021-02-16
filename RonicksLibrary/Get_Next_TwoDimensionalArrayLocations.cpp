@@ -1,5 +1,5 @@
 // next_permutation 에 의한 순열에 따른 2차원 배열의 방문위치를 반환한다
-vector<pair<int, int> > Get_Next_TwoDimensionalArrayLocations(vector<bool>& visited, int columnSize){ 
+vector<pair<int, int> > get_next_twoDimensionalArrayLocations(vector<bool>& visited, int columnSize){ 
     vector<pair<int, int> > locations; // row, column
 
     for(int i = 0 ; i < visited.size(); i++){
