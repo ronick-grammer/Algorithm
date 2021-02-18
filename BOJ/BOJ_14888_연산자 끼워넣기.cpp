@@ -4,6 +4,8 @@
 #include <utility>
 using namespace std;
 
+//problem link: https://www.acmicpc.net/problem/14888
+
 int n;
 int minNum = 1e9, maxNum = -1e9;
 vector<int> numbers; // 오리지널 숫자들을 담을 변수
