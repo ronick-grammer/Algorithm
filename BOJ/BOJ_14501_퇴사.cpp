@@ -7,7 +7,6 @@ using namespace std;
 
 pair<int, int> schedule[16];
 int dp[16];
-int maxValue;
 
 int main(void){
     int n;
