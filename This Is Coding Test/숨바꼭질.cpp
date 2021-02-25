@@ -9,7 +9,6 @@ int n, m;
 
 int d[20001]; // 최단 거리 저장
 vector<pair<int, int> > graph[20001]; // 헛간번호, 거리
-int sameCost[20001]; // 같은 최단 거리의 갯수들 저장
 
 pair<int, pair<int, int> > result; // 최단 거리가 가장 먼 헛간 번호, 그 헛간까지의 거리, 최단 거리가 가장 먼 헛간과 같은 거리를 가지는 헛간 갯수
 
@@ -50,10 +49,15 @@ void dijkstra(int start){
             cost = d[i]; 
             max_minNumber = i;
         }
-        sameCost[cost]++; // 같은 최단 거리들의 갯수를 저장한다
     }
+    
+    // 이진 탐색을 이용해 최단 거리가 가장 먼 헛간과 같은 거리를 가지는 헛간 갯수를 구하자
+    sort(d, d + n + 1);     
+    int* left = lower_bound(d, d + n + 1, cost);
+    int* right = upper_bound(d, d + n + 1, cost);
+    int sames = right - left;
 
-    result = make_pair(max_minNumber, make_pair(cost, sameCost[cost]));
+    result = make_pair(max_minNumber, make_pair(cost, sames));
 }
 
 int main(void){
@@ -68,7 +72,7 @@ int main(void){
         graph[to].push_back(make_pair(from, 1));
     }
 
-    fill(d, d + 20001, INF);
+    fill(d, d + n  + 1, INF);
 
     dijkstra(1); // 1번 헛간
     cout<<result.first<<' '<<result.second.first<<' '<<result.second.second<<'\n';
