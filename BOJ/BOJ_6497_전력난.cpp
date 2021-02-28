@@ -4,6 +4,8 @@
 #include <vector>
 using namespace std;
 
+//problem link: https://www.acmicpc.net/problem/6497
+
 int parent[200001];
 
 bool compare(pair<int, pair<int, int> > a, pair<int, pair<int, int> > b){
