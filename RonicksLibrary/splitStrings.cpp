@@ -5,7 +5,7 @@
 #include <sstream>
 
 
-vector<string> splitString(string str, char c){
+vector<string> splitStringByCharacter(string str, char c){
     vector<string> splitedStrings; 
     istringstream iss(str);
 
