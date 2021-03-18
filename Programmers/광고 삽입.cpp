@@ -63,8 +63,8 @@ string solution(string play_time, string adv_time, vector<string> logs) {
       int start_sec_log = hoursToSeconds(sep_start_time); // 시청자가 동영상을 보기 시작하는 시간
       int end_sec_log = hoursToSeconds(sep_end_time); // 시청자가 동영상을 보기를 끝내는 시간
       
-      for(int i = start_sec_log; i < end_sec_log; i++){ // 시청자 수 누적
-        all_time[i]++;
+      for(int j = start_sec_log; j < end_sec_log; j++){ // 시청자 수 누적
+        all_time[j]++;
       }
     }
 
@@ -92,7 +92,7 @@ string solution(string play_time, string adv_time, vector<string> logs) {
     int startTime = 0;
     for(int i = length_adv_time; i < length_play_time; i++){
       // 광고 재생 시작 시간을 1초씩 옯긴다. 그리고 옯겼을 때의 구간 합을 새로 구한다.
-      sum = (sum - (all_time[i - length_adv_time]) ) + all_time[i];
+      sum = (sum - all_time[i - length_adv_time]) + all_time[i];
 
       // 1초 옮긴 광고의 재생 구간 합이 기존 구간 합보다 높으면 새로 갱신
       // 즉, 1초 옮긴 광고 재생 구간에서 시청자 수가 많으면 새로 최대 시청자수 갱신
