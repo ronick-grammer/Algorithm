@@ -78,7 +78,6 @@ vector<SameCards> getSameCardLocation(const vector<vector<int> > &v){
   return sameCards;
 }
 
-bool condition = false;
 // 특정 카드 위치에서 다른 모든 위치들로 가는 최소 조작 횟수를 담은 보드 반환
 vector<vector<int> >  bfs(int startRow, int startColumn, const vector<vector<int> > &board){
   queue<pair<int, pair<int, int> > > q;
