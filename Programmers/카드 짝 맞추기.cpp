@@ -178,10 +178,7 @@ int solution(vector<vector<int> > board, int r, int c) {
   
   int minCost = INF;
   do{
-
-    vector<vector<int> > temp_board = board;
-    minCost = min(minCost, dfs(make_pair(r, c), 0, sameCards, temp_board));
-
+    minCost = min(minCost, dfs(make_pair(r, c), 0, sameCards, board));
   }while(next_permutation(sameCards.begin(), sameCards.end(), compare));
 
   answer = minCost;
