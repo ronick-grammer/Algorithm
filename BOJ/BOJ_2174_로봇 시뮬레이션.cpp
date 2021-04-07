@@ -8,7 +8,7 @@ int a, b;
 int n, m;
 
 int map[101][101];
-// 북 -> 동 -> 남 -> 서
+// <- 북 <-> 동 <-> 남 <-> 서 ->
 char directions[4] = {'N', 'E', 'S', 'W'};
 int directionRow[4] = {-1, 0, 1, 0};
 int directionColumn[4] = {0, 1, 0, -1};
