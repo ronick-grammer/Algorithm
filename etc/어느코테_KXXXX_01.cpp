@@ -4,6 +4,7 @@
 using namespace std;
 
 /*
+// 문자를 숫자로 변환하기 
 // 테스트 케이스
 "one4seveneight"  ->	1478
 "23four5six7"	->   234567
