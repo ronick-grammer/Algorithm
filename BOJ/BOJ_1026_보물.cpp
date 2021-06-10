@@ -21,7 +21,7 @@ int main(void){
         scanf(" %d", &b[i]);
     }
 
-    // A의 가장 작은 수와 B의 가장 작은 수를 차례차례 곱하여 더해주면 된다.
+    // A의 가장 작은 수와 B의 가장 큰 수를 차례차례 곱하여 더해주면 된다.
     sort(a, a + n);
     sort(b, b + n, compare);
     
