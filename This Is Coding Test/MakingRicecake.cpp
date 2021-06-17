@@ -13,7 +13,7 @@ int binarySearch(int value, int start, int end){
     
     while(low <= high){
         mid = (low + high) / 2; // 절단기 높이를 설정
-        int sum = 0;
+        long long sum = 0;
         
         for(int i = 0; i < n; i++){
             if(v[i] > mid){          
