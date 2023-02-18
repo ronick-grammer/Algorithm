@@ -1,5 +1,7 @@
 import Foundation
 
+// 출처: https://jeonyeohun.tistory.com/321
+
 class Node<T> {
     let data: T
     var next: Node?
