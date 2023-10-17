@@ -55,7 +55,7 @@ func solution(_ works:[[Int]], _ wage:Int) -> Int {
         let weekHours = weekDays.map { day in
             Double(day.filter { $0 }.count)
         }.reduce(0) { $0 + $1 }
-        week += (weekHours > 8 ) ? weekHours * (Double(wage) * 0.2) : 0
+        week += (weekHours >= 15 ) ? weekHours * (Double(wage) * 0.2) : 0
     }
     
     return Int(regular) + Int(overtime) + Int(night) + Int(weekend) + Int(week)
